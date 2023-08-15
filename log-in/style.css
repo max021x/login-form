@@ -1,53 +1,45 @@
-*{
+*{  box-sizing: border-box;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-html,body{
+body,html{
     display: grid;
     height: 100%;
     place-items: center;
     background-color: #f2f2f2;
 }
 .wrapper{
- width: 400px;
- background-color: #fff;
- border-radius: 15px;
- overflow: hidden;
- box-shadow: 0 15px 20px rgba(0,0,0,0.1);
+    width: 450px;
+    border-radius: 15px;
+    background-color: #fff;
+    overflow: hidden;
 }
-.wrapper .title{
+.wrapper .titel{
     line-height: 100px;
-    background: linear-gradient(-135deg,rgb(150, 39, 201),rgb(221, 96, 223));
+    text-align: center;
+    background:linear-gradient(-135deg,#b438ee,#ef11a5);
     font-size: 2rem;
     font-weight: 600;
-    text-align: center;
     color: #fff;
-    
 }
 .wrapper form{
     padding: 10px 30px 50px 30px;
 }
-.wrapper form .filed{
-    position: relative;
-    height: 50px;
-    width: 100%;
-    margin-top: 20px;
+.wrapper form .filed {
+      height: 50px;
+      width: 100%;
+      margin-top: 20px;
+      position: relative;
+       
 }
 .wrapper form .filed input{
     height: 100%;
     width: 100%;
-    padding-left: 20px;
     border-radius: 25px;
-    outline: none;
     border: 1px solid lightgrey;
-    transition: all ease 1s ;
-}
-.wrapper form .filed input:focus,
-.wrapper form .filed input:valid{
-
-    border-color: #4158d0;
+    outline: none;
+    padding-left: 20px;   
 }
 .wrapper form .filed label{
     position: absolute;
@@ -56,42 +48,46 @@ html,body{
     font-size: 1.1rem;
     transform: translateY(-50%);
     pointer-events: none;
-    transition: all ease 0.3s;
     background-color: #fff;
+    transition: all 0.4s;
 }
 .wrapper form .filed input:focus ~ label,
 .wrapper form .filed input:valid ~ label{
-    top:0;
-    font-size: 1rem;
+    top: 0%;
     transform: translateY(-50%);
+    font-size: 1rem;
+}
+.wrapper .pass-link {
+    margin: 8px 0  0 10px;
+    
+}
+.wrapper .pass-link .rem-input{
+    direction: rtl;
+    margin: -16px 0px 0px  10px;
+    display: flex;
+    gap: 4px;
 }
 .wrapper form .filed input[type=submit]{
-    color:#fff;
-    background:linear-gradient(-135deg,rgb(150, 39, 201),rgb(221, 96, 223));
+    padding-left: 0;
     font-size: 1.1rem;
-    font-weight: 500;
-    border: none;
-    padding-left: 0px;
+    color: #fff;
+    background:linear-gradient(-135deg,#b438ee,#ef11a5);
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.4s;
+    margin-top: 5px;
 }
 .wrapper form .filed input[type=submit]:active{
-    transform: scale(0.9);
+    transform: scale(0.55);
 }
-.wrapper form .pass-link{
-    margin: 8px 0 0 10px ;
-}
-.wrapper form .sign-up{
-    margin-top: 20px;
+.wrapper .member{
     text-align: center;
-   
+    padding: 0px 0px 30px 0;    
 }
-.wrapper form .pass-link a,
-.wrapper form .sign-up a{
-    text-decoration: none;
-   
-}
-.wrapper form .pass-link a:hover,
-.wrapper form .sign-up a:hover{
-    text-decoration: underline;
+
+/* 414 px */
+
+@media (max-width:414px){
+    .wrapper {
+        width: 380px;
+    }
 }
